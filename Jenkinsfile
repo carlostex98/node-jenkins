@@ -1,10 +1,10 @@
 pipeline {
-    agent { docker { image 'node:16.13.1-alpine' } }
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
-                sh 'npm i'
+                nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+                    sh 'npm config ls'
+                }
             }
         }
     }
