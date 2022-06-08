@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'echo "Creando las imagenes'
+                sh 'echo "Creando las imagenes"'
                 sleep 10
                 sh 'echo "Imagenes creadas"'
                 sh 'echo "******************************"'
