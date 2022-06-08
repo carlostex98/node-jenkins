@@ -1,11 +1,7 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') { 
-            steps {
-                sh 'sudo apt install nodejs'
-                sh 'npm i'
-            }
+node('docker') {
+    stage('Build') {
+        docker.image('node:16.13.1-alpine').inside {
+            sh 'node --version'
         }
     }
 }
