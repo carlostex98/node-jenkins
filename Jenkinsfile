@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "Iniciando las pruebas"'
-                sleep 35
+                sleep 38
                 sh 'echo "Pruebas realizadas"'
                 sh 'echo "******************************"'
             }
@@ -20,7 +20,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Creando las imagenes"'
-                sleep 10
+                sleep 23
                 sh 'echo "Imagenes creadas"'
                 sh 'echo "******************************"'
             }
@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Lanzando a produccion"'
-                sleep 10
+                sleep 15
                 sh 'echo "Sistema en linea"'
             }
         }
