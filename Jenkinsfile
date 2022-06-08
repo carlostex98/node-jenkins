@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'chown -R 128:136 "/.npm"'
+                sh 'chown -R $(whoami) "$HOME/.npm"'
                 sh 'npm install' 
             }
         }
