@@ -1,15 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu'
-        }
-    }
+    agent any
     stages {
         stage('Build') { 
             steps {
-                sh 'sudo apt install nodejs'
-                sh 'node -v' 
-            }
+                sh 'npm i'
         }
     }
 }
