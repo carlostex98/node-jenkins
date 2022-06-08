@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Lanzando a produccion"'
-                sleep 15
+                sleep 25
                 sh 'echo "Sistema en linea"'
             }
         }
