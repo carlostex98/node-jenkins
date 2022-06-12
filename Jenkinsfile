@@ -4,32 +4,19 @@ pipeline {
         stage('Install') {
             steps {
                 sh 'echo "Instalando depencias"'
-                sleep 15
-                sh 'echo "Dependencias instaladas"'
-                sh 'echo "******************************"'
+                sh 'npm i'
             }
         }
         stage('Test') {
             steps {
                 sh 'echo "Iniciando las pruebas"'
-                sleep 38
-                sh 'echo "Pruebas realizadas"'
-                sh 'echo "******************************"'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'echo "Creando las imagenes"'
-                sleep 23
-                sh 'echo "Imagenes creadas"'
-                sh 'echo "******************************"'
+                sh 'node -v'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Lanzando a produccion"'
-                sleep 25
-                sh 'echo "Sistema en linea"'
+                sh 'echo "Creando las imagenes"'
+                sh 'node index.js'
             }
         }
     }
